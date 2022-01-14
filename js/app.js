@@ -129,8 +129,16 @@ function identPageScroll(){
             }
 
         }
+        let screenW = document.documentElement.scrollWidth;
+        function resizeUpdate(){
+            if(document.documentElement.scrollWidth!==screenW){
+                cleanClass();
+                screenW= document.documentElement.scrollWidth
+            }
+            
+        }
 
-        // window.addEventListener("resize",cleanClass);
+        window.addEventListener("resize",resizeUpdate);
 
         
 

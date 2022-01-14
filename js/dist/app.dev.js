@@ -83,8 +83,14 @@ function identPageScroll() {
         stiky.classList.remove('fixed');
         stiky.classList.add('end');
       }
-    }; // window.addEventListener("resize",cleanClass);
+    };
 
+    var resizeUpdate = function resizeUpdate() {
+      if (document.documentElement.scrollWidth !== screenW) {
+        cleanClass();
+        screenW = document.documentElement.scrollWidth;
+      }
+    };
 
     if (!document.querySelector('.cost_block[data-action="true"]') || !document.querySelector('.packeage_block[data-action="true"]')) return;
     var header = document.querySelector('header');
@@ -131,6 +137,8 @@ function identPageScroll() {
         }
       });
     });
+    var screenW = document.documentElement.scrollWidth;
+    window.addEventListener("resize", resizeUpdate);
   } catch (e) {
     console.log('Error on "identPageScroll" function', e);
   }
