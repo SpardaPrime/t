@@ -130,7 +130,7 @@ function identPageScroll(){
 
         }
 
-        window.addEventListener("resize",cleanClass);
+        // window.addEventListener("resize",cleanClass);
 
         
 

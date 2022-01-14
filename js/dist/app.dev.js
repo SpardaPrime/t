@@ -83,7 +83,8 @@ function identPageScroll() {
         stiky.classList.remove('fixed');
         stiky.classList.add('end');
       }
-    };
+    }; // window.addEventListener("resize",cleanClass);
+
 
     if (!document.querySelector('.cost_block[data-action="true"]') || !document.querySelector('.packeage_block[data-action="true"]')) return;
     var header = document.querySelector('header');
@@ -130,7 +131,6 @@ function identPageScroll() {
         }
       });
     });
-    window.addEventListener("resize", cleanClass);
   } catch (e) {
     console.log('Error on "identPageScroll" function', e);
   }
