@@ -1,0 +1,36 @@
+@font-face {
+  font-family: Mont;
+  src: url('../fonts/mont/Fontfabric - Mont Light.otf');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: Mont;
+  src: url('../fonts/mont/Fontfabric - Mont Regular.otf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Mont3;
+  src: url('../fonts/FontsFree-Net-Mont1.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Mont1';
+  src: local('Mont Regular'), local('Mont-Regular'), url('../fonts/Mont-Regular/Mont-Regular.woff2') format('woff2'), url('../fonts/Mont-Regular/Mont-Regular.woff') format('woff'), url('../fonts/Mont-Regular/Mont-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Mont;
+  src: url('../fonts/mont/Fontfabric - Mont SemiBold.otf');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: Mont;
+  src: url('../fonts/mont/Fontfabric - Mont Bold.otf');
+  font-weight: 700;
+  font-style: normal;
+}
