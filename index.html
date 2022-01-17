@@ -28957,7 +28957,7 @@ xpopup
             <div class="pageContent">
                 <div class="ident_page">
     <h1 class="heading">Київський міський дитячий кардіологічний центр</h1>
-    <div class="main_img view_project" >
+    <div class="main_img view_project" data-path="./pdf/pdf1.pdf" data-pdf-show="true">
         <img class="lazy img" width="100%" height="500" data-src="./img/identica.jpg" data-webp="./img/identica.webp" alt="photo"
         src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
     </div>
@@ -28973,8 +28973,8 @@ xpopup
             </div>
         </div>
         <div class="right">
-            <button type="button" class="main_btn no_bg with_hover w210">переглянути проект</button>
-             <button type="button" class="main_btn no_bg with_hover black w210">хочу консультацію</button>
+            <button type="button" data-pdf-show="true" data-path="./pdf/pdf1.pdf" class="main_btn no_bg with_hover w210">переглянути проект</button>
+             <button onclick="popup.show('consultationPopup')" type="button" class="main_btn no_bg with_hover black w210">хочу консультацію</button>
         </div>
     </div>
     <div class="cost_block" data-action="true">
@@ -30370,8 +30370,199 @@ xpopup
 
             </div>
         </div>
+
+        <!-- inject here -->
+        <div class="popup_block consultationPopup right" data-pos="right" data-index="0" >
+    <div class="logo">
+        <img width="500" height="500" src="./img/logoG.png" alt="">
+    </div>
+    <div class="close main_btn no_bg with_hover black" onclick="popup.hide()">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 9.6L14.4 16L16 14.4L9.6 8L16 1.6L14.4 0L8 6.4L1.6 0L0 1.6L6.4 8L0 14.4L1.6 16L8 9.6Z" fill="#C4C4C4"></path>
+        </svg>
+    </div>
+    
+    <div class="popupWrap">
+        <div class="cosultation">
+            <div class="h2 middle">Хочу консультацію</div>
+
+          
+
+            <form class="orderForm " id="consultationForm">
+                    <div class="orderFormContent">
+                        <div class="row halfWidht">
+                            <div class="column col-12 noPadding">
+                                <div class="title bigMargin"><b>Дані замовника</b></div>
+                                <label class="with_line w50">
+                                    <input type="text" placeholder="Ваше ім’я" name="firstname" value="" required="">
+                                </label>
+                                <label class="with_line w50">
+                                    <input type="text" placeholder="Ваше прізвище" name="lastname" value="" required="">
+                                </label>
+                                <label class="with_line w50">
+                                    <input type="email" placeholder="E-mail" name="email" value="" required="">
+                                </label>
+                                <label class="with_line w50">
+                                    <input type="tel" class="tel_mask" placeholder="Телефон" name="phone" value="" required="" maxlength="20">
+                                </label>
+                                
+                            </div>
+                            <div class="column col-12 noPadding">
+                                <div class="title"><b>Як з вами зв’язатися?</b></div>
+                                <div class="label flexable">
+                                    <label class="checkbox">
+                                        <input type="radio" name="writeOrCall" value="write">
+                                        <span class="check"></span>
+                                        <span>Писати</span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="radio" name="writeOrCall" checked="" value="call">
+                                        <span class="check"></span>
+                                        <span>Дзвонити</span>
+                                    </label>
+                                </div>
+                            </div>
+                           
+                        </div>
+                        <div class="row flex lastRow">
+                            <div class="column col-12 col-sm-6 noPadding customPadd">
+                                <div class="label with_line w50">
+                                    <div class="textareaWrap"><textarea name="comment" placeholder="Коментар або посилання на файли (необов’язково)" style="height: 42px;"></textarea></div>
+                                </div>
+                                <div class="label file">
+                                    <input type="text" name="orderFilesList" class="orderFilesList" style="display:none;">
+                                    <label>
+                                        <input type="file" name="orderFiles" multiple="">
+                                        <svg class="icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="10" cy="10" r="10" fill="white"></circle>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4093 10.5717C15.7343 10.2507 15.7343 9.72593 15.4093 9.40491C15.0899 9.0895 14.5763 9.0895 14.2569 9.40491L8.93563 14.6603C8.43382 15.1559 7.84445 15.3985 7.15213 15.3985C6.45981 15.3985 5.87045 15.1559 5.36863 14.6603C4.88409 14.1817 4.64433 13.608 4.64433 12.9218C4.64433 12.238 4.89003 11.656 5.39184 11.1604L11.5645 5.06427C11.8499 4.78232 12.186 4.6378 12.587 4.62396C13.0028 4.62503 13.3419 4.76362 13.6231 5.04135C13.9054 5.32016 14.0457 5.65655 14.0457 6.06938C14.0457 6.4822 13.9054 6.81859 13.6231 7.0974L8.42511 12.231C8.37035 12.2851 8.28379 12.3275 8.12676 12.3275C8.02589 12.3275 7.93836 12.2937 7.85161 12.2081C7.8091 12.1661 7.77502 12.1133 7.75336 12.0433C7.73189 11.9739 7.73189 11.8987 7.75336 11.8293C7.77502 11.7593 7.8091 11.7066 7.85161 11.6646L12.1837 7.38615C12.5088 7.06513 12.5088 6.54036 12.1837 6.21934C11.8644 5.90393 11.3508 5.90393 11.0314 6.21934L6.68471 10.5121C6.29065 10.9013 6.0812 11.3776 6.06326 11.9268L6.06295 11.9363L6.06326 11.9459C6.0812 12.495 6.29065 12.9713 6.68471 13.3605C7.07877 13.7497 7.56105 13.9567 8.11708 13.9744L8.12676 13.9744C8.69884 13.9744 9.19362 13.7769 9.59201 13.3834L14.79 8.24984C15.4021 7.64537 15.7133 6.91348 15.7133 6.06938C15.7133 5.22527 15.4021 4.49338 14.79 3.88891C14.1916 3.29796 13.4576 3 12.6054 3C11.7507 3 11.0096 3.30737 10.3976 3.91183L4.22494 10.008C3.41184 10.811 3 11.7797 3 12.8989C3 14.0442 3.40096 15.0219 4.20174 15.8127C5.01582 16.6167 6.00508 17.015 7.15215 16.9996C8.2992 17.0149 9.28845 16.6167 10.1025 15.8127L15.4093 10.5717Z" fill="black"></path>
+                                        </svg>
+                                        <span class="stub">Додати файли</span>
+                                        <div class="file_data">
+                                            <div class="topRow">
+                                                <div class="file_name"></div>
+                                                <div class="percent">56%</div>
+                                                <div class="errorText">Макс 15мб</div>
+                                                <div class="close clear">
+                                                    <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect x="0.571733" width="7.67958" height="0.808377" transform="rotate(45 0.571733 0)" fill="black"></rect>
+                                                        <rect y="5.43103" width="7.67958" height="0.808377" transform="rotate(-45 0 5.43103)" fill="black"></rect>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="progressLine">
+                                                <div class="innerLine"></div>
+                                                <svg class="errorLine" width="187" height="2" viewBox="0 0 187 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect opacity="0.1" width="187" height="2" fill="black"></rect>
+                                                    <path d="M0 0H94.56L93.9297 1L94.6838 2H0V0Z" fill="#E12929"></path>
+                                                    <path d="M102 0H187V2H102L100.5 1L102 0Z" fill="#E12929"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        
+
+                        </div>
+                        
+                        <div class="formControll row flex margin0 between" style="margin-left: 0px; opacity: 1;">
+                            <button type="submit" class="main_btn no_bg with_hover submit black" onclick="$(this).closest('form').submit();">відправити</button>
+                            <div class="graphic">
+                                <h4>Відділ дизайну працює:</h4>
+                                <p>Пн-Пт   09:00–21:00</p>
+                                 <p>Сб-Нд   10:00–19:00</p>
+                            </div>
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup_block thanksPopup right" data-pos="right" data-index="0" >
+    <div class="logo">
+        <img width="500" height="500" src="./img/logo_group2.png" alt="">
+    </div>
+    <div class="close main_btn no_bg with_hover black" onclick="popup.hide()">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 9.6L14.4 16L16 14.4L9.6 8L16 1.6L14.4 0L8 6.4L1.6 0L0 1.6L6.4 8L0 14.4L1.6 16L8 9.6Z" fill="#C4C4C4"></path>
+        </svg>
+    </div>
+    
+    <div class="popupWrap">
+        <div class="cosultation">
+            <div class="h2 middle">Дякуємо за ваше звернення!</div>
+            <div class="op">Наші фахівці зв'яжуться з вами найближчим часом</div>
+            <div class="hraph">
+                <h5>Відділ дизайну працює:</h5>
+                <p>Пн-Пт   09:00–21:00</p>
+                <p>Сб-Нд   10:00–19:00</p>
+            </div>
+
+            <button class="main_btn no_bg with_hover w210" type="button" onclick="popup.hide()">Повернутися</button>
+        </div>
+    </div>
+</div>
+        <!-- inject here -->
+
     </div>
 
+    <div class="pdf_wrapper">
+    <div class="container">
+        <button type="button" data-type="close" class="close main_btn with_hover closeBtn">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 9.6L14.4 16L16 14.4L9.6 8L16 1.6L14.4 0L8 6.4L1.6 0L0 1.6L6.4 8L0 14.4L1.6 16L8 9.6Z" fill="#C4C4C4"></path>
+            </svg>
+        </button>
+        <div class="field">
+            <canvas id="pdf"></canvas>
+            <div id="pdf_loading">
+                <div  class="lds-ring"><div></div><div></div><div></div><div></div></div>
+            </div>
+
+        </div>
+        <div class="decription">
+            Переглянути інші проекти
+        </div>
+        <div class="slider_container">
+            <div class="swiper_pdf uncelectable">
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide" data-pdf-change="true" data-path="./pdf/test1.pdf">
+                        <img width="400" height="300" src="./img/salt.jpg" alt="project">
+                    </div>
+                    <div class="swiper-slide"  data-pdf-change="true" data-path="./pdf/test2.pdf">
+                        <img width="400" height="300" src="./img/packet.jpg" alt="project">
+                    </div>
+                    <div class="swiper-slide"  data-pdf-change="true" data-path="./pdf/test3.pdf">
+                        <img width="400" height="300" src="./img/city.jpg" alt="project">
+                    </div>
+                    <div class="swiper-slide"  data-pdf-change="true" data-path="./pdf/test1.pdf">
+                        <img width="400" height="300" src="./img/visit.jpg" alt="project">
+                    </div>
+                    <div class="swiper-slide"  data-pdf-change="true" data-path="./pdf/pdf1.pdf">
+                        <img width="400" height="300" src="./img/visit.jpg" alt="project">
+                    </div>
+                  </div>
+                  <!-- If we need navigation buttons -->
+                  <div class="swiper-button-prev">
+                    <svg width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.20726 10.7927L7.91436 11.4998L6.50015 12.9141L5.79304 12.207L0.793045 7.20696L0.0859381 6.49985L0.793045 5.79274L5.79305 0.792743L6.50015 0.0856367L7.91437 1.49985L7.20726 2.20696L3.91436 5.49985L25.5001 5.49985L26.5001 5.49985L26.5001 7.49985L25.5001 7.49985L3.91436 7.49985L7.20726 10.7927Z" fill="black"/>
+                        </svg>
+                        
+                  </div>
+                  <div class="swiper-button-next">
+                    <svg width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7929 10.7929L19.0858 11.5L20.5 12.9142L21.2071 12.2071L26.2071 7.20711L26.9142 6.5L26.2071 5.79289L21.2071 0.792894L20.5 0.0857873L19.0858 1.5L19.7929 2.20711L23.0858 5.5L1.5 5.5L0.500001 5.5L0.500002 7.5L1.5 7.5L23.0858 7.5L19.7929 10.7929Z" fill="black"/>
+                        </svg>
+                        
+                  </div>
+            </div>
+        </div>
+
+    </div>
+</div>
 
     <script>var wsme = 0</script>
 
@@ -30399,6 +30590,10 @@ xpopup
             }
         });
     </script>
+    <script src="./js/pdf.js" defer></script>
+    <script src="./js/pdf.worker.js" defer></script>
+
+
     <script src="./js/app.js" defer></script>
 
     <!-- Code injected by live-server -->
