@@ -1507,3 +1507,269 @@
 .popup_block.thanksPopup .popupWrap .cosultation .hraph p + p {
   margin-top: 8px;
 }
+.catalogPage .pagination {
+  margin-top: -28px;
+}
+.catalogPage .portfolio_detail {
+  margin-left: 36px;
+}
+.catalogPage .portfolio_detail h1 {
+  font-family: Mont;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 58px;
+  color: #000000;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 540px) {
+  .catalogPage .portfolio_detail h1 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+.catalogPage .portfolio_detail h2 {
+  font-family: Mont;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 32px;
+  color: #000000;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 540px) {
+  .catalogPage .portfolio_detail h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+.catalogPage .portfolio_detail h3 {
+  font-family: Mont;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+@media screen and (max-width: 540px) {
+  .catalogPage .portfolio_detail h3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.catalogPage .portfolio_detail .main_img {
+  position: relative;
+  width: 100%;
+  padding-top: 69.5%;
+}
+.catalogPage .portfolio_detail .main_img img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.catalogPage .portfolio_detail .subject_block {
+  padding-top: 50px;
+  padding-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.catalogPage .portfolio_detail .subject_block .left {
+  width: 66%;
+  min-width: 300px;
+  max-width: 688px;
+}
+.catalogPage .portfolio_detail .subject_block .left .table {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.catalogPage .portfolio_detail .subject_block .left .table div {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  border: 0.5px solid #979797;
+  margin: -0.5px;
+}
+.catalogPage .portfolio_detail .subject_block .left .table div:nth-child(odd) {
+  width: 70%;
+  justify-content: flex-start;
+  padding-left: 31px;
+}
+.catalogPage .portfolio_detail .subject_block .left .table div:nth-child(even) {
+  width: 30%;
+  justify-content: flex-end;
+  padding-right: 31px;
+}
+.catalogPage .portfolio_detail .subject_block .left .table div span {
+  font-family: Mont;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #979797;
+}
+.catalogPage .portfolio_detail .subject_block .left .graph p {
+  margin-bottom: 0;
+  font-family: Mont;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  color: #979797;
+}
+.catalogPage .portfolio_detail .subject_block .left .graph p + p {
+  margin-top: 8px;
+}
+.catalogPage .portfolio_detail .subject_block .right {
+  margin-left: 20px;
+  padding-top: 45px;
+}
+.catalogPage .portfolio_detail .images_content {
+  padding-top: 50px;
+  padding-bottom: 26px;
+}
+.catalogPage .portfolio_detail .images_content .field {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -17px;
+}
+.catalogPage .portfolio_detail .images_content .field.reverse {
+  flex-direction: row-reverse;
+}
+.catalogPage .portfolio_detail .images_content .field .big {
+  width: calc(67% - 34px);
+  margin: 0 17px;
+}
+.catalogPage .portfolio_detail .images_content .field .big .wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 68.5%;
+}
+.catalogPage .portfolio_detail .images_content .field .big .wrap img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+.catalogPage .portfolio_detail .images_content .field .small {
+  width: calc(33% - 34px);
+  margin: 0 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.catalogPage .portfolio_detail .images_content .field .small .wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 70.5%;
+}
+.catalogPage .portfolio_detail .images_content .field .small .wrap img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+.catalogPage .portfolio_detail .pagination {
+  margin-top: 80px;
+}
+.catalogPage .portfolio_detail .text_field {
+  padding-top: 90px;
+}
+.catalogPage .portfolio_detail .text_field .field {
+  margin-bottom: 10px;
+  max-height: 130px;
+  transition: max-height 1s;
+  -webkit-line-clamp: 4;
+  /* количество строк */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.catalogPage .portfolio_detail .text_field .field h2 {
+  margin-bottom: 25px;
+}
+.catalogPage .portfolio_detail .text_field .field p {
+  font-family: 'Mont';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #979797;
+  margin-bottom: 25px;
+}
+.catalogPage .portfolio_detail .text_field .field ul {
+  list-style-type: none;
+}
+.catalogPage .portfolio_detail .text_field .field ul li {
+  position: relative;
+  font-family: Mont;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #979797;
+  margin-bottom: 0;
+  padding-left: 11px;
+}
+.catalogPage .portfolio_detail .text_field .field ul li::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  background-image: url('data:image/svg+xml,%3Csvg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M3.00293 0.830145L5.17355 3.00077L3.00293 5.17139L3.00293 0.830145Z" fill="%23979797"/%3E%3Cpath d="M0.832031 2.99991L3.00265 0.829291L3.00265 5.17053L0.832031 2.99991Z" fill="%23979797"/%3E%3C/svg%3E%0A');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.catalogPage .portfolio_detail .text_field .field ul li + li {
+  margin-top: 20px;
+}
+.catalogPage .portfolio_detail .text_field .toggle_text {
+  border: none;
+  background: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  cursor: pointer;
+}
+.catalogPage .portfolio_detail .text_field .toggle_text svg {
+  margin-left: 4px;
+  transition: transform 0.3s;
+}
+.catalogPage .portfolio_detail .text_field .toggle_text .less {
+  display: none;
+}
+.catalogPage .portfolio_detail .text_field .toggle_text .more {
+  display: block;
+}
+.catalogPage .portfolio_detail .text_field .toggle_text.show svg {
+  transform: rotate(180deg);
+}
+.catalogPage .portfolio_detail .text_field .toggle_text.show .less {
+  display: block;
+}
+.catalogPage .portfolio_detail .text_field .toggle_text.show .more {
+  display: none;
+}
+.catalogPage .portfolio_detail .text_field .toggle_text span {
+  font-family: 'Mont';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #000000;
+}

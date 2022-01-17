@@ -343,9 +343,36 @@ function pdfViewer() {
   }
 }
 
+function showAndHideTxt(){
+  try{
+    if(!document.querySelector('[data-toggle-text="true"]'))return;
+    let trigers = document.querySelectorAll('[data-toggle-text="true"]');
+    trigers.forEach(triger=>{
+      triger.addEventListener('click',()=>{
+        let parent = triger.parentElement||false;
+        if(!parent||!parent.classList.contains('text_field'))return false;
+        let field = parent.querySelector('.field');
+        if(!field) return false;
+        if(triger.classList.contains('show')){
+          field.removeAttribute('style');
+          triger.classList.remove('show')
+        }else{
+          let H = field.scrollHeight;
+          triger.classList.add('show');
+          field.style.maxHeight = H + 'px';
+        }
+      })
+     
+    })
+  }catch(e){
+    console.log('Error on "showAndHideTxt" function', e);
+  }
+}
+
 window.onload = function () {
   identPageScroll();
   pdfViewer();
+  showAndHideTxt();
 };
 
 // var scrollElPos = scrollEl.getBoundingClientRect().top;
